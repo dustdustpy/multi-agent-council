@@ -1,0 +1,28 @@
+# Secrets
+council_config.json
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Data
+council_history.db
+*.log
+audit.jsonl
+
+# IDE
+.vscode/
+.idea/
+
+# Windows artifacts
+nul
+
+# MCP local config
+.mcp.json
+
+# Claude
+.claude/

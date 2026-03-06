@@ -1,0 +1,42 @@
+{
+  "council": {
+    "members": [
+      {
+        "model": "claude-sonnet-4-5-20250929",
+        "format": "anthropic",
+        "base_url": "${ANTHROPIC_BASE_URL}",
+        "api_key": "${ANTHROPIC_API_KEY}",
+        "context_window": 200000,
+        "max_output": 64000
+      },
+      {
+        "model": "gpt-4o",
+        "format": "openai",
+        "base_url": "${OPENAI_BASE_URL}",
+        "api_key": "${OPENAI_API_KEY}",
+        "context_window": 128000,
+        "max_output": 16384
+      }
+    ],
+    "synthesizer": {
+      "model": "claude-opus-4-6",
+      "format": "anthropic",
+      "base_url": "${ANTHROPIC_BASE_URL}",
+      "api_key": "${ANTHROPIC_API_KEY}",
+      "context_window": 200000,
+      "max_output": 128000
+    }
+  },
+  "prompts": {
+    "system_prompt": "You are a Senior Expert Reviewer. You evaluate ALL aspects equally: Architecture, Code Quality, Security, Performance, UX/DX, Feasibility, and Maintainability. Be thorough, specific, and actionable."
+  },
+  "settings": {
+    "timeout_seconds": 120,
+    "max_concurrent": 20,
+    "allowed_roots": [],
+    "show_thinking": false,
+    "debug": false,
+    "min_quorum": 1,
+    "rate_limit_per_minute": 10
+  }
+}
